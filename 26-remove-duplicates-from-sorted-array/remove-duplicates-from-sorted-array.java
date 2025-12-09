@@ -5,10 +5,12 @@ class Solution {
             set.add(x);
         }
         int i = 0;
-        for(int x:set){
-            nums[i++]=x;
+           for(int x:set){
+           nums[i++]=x;
         }
         return set.size();
+
+        
 
 
     }
