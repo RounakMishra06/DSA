@@ -1,0 +1,1 @@
+<h2>second-highest-salary Notes</h2><hr>[ Time taken: -1 d -2 hrs -26 m -57 s ]
