@@ -11,7 +11,7 @@
  */
 public class Solution {
     public ListNode detectCycle(ListNode head) {
-        ListNode entry = head;
+      
         if (head == null) return null;
      ListNode s = head;
      ListNode f = head;
@@ -19,7 +19,7 @@ public class Solution {
         s=s.next;
         f=f.next.next;
         if(s==f){
-         
+            ListNode entry = head;
                 while (entry != s) {
                     entry = entry.next;
                     s = s.next;
