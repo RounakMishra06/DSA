@@ -1,17 +1,33 @@
 class Solution {
     public double myPow(double x, int n) {
-        if(n==0) return 1;
-        if(n==Integer.MIN_VALUE) return 1/ (x * myPow(x,Integer.MAX_VALUE));
-        if(n<0){
-            x = 1/x;
-            n = Math.abs(n);
-        }
-        double h = myPow(x, n/2);
-        h = h*h;
-        if(n%2!=0){
-            h=x*h;
-        }
-        return h;
-    }
+        // if (n == 0 || x == 1.0) return 1;
 
+        // long temp = n;
+
+        // if(n<0){
+        //     x = 1/x;
+        //     temp = -1L * n;
+        // }
+        // double ans = 1;
+        // for(int i = 0; i< temp; i++){
+        //   ans *= x;
+        // }
+        // return ans;
+
+        long N = n;
+        if(N<0){
+            x = 1/x;
+            N=-N;
+        }
+        double ans  = 1;
+        while(N>0){
+            if(N%2==1){
+            ans *= x;
+            }
+            x*=x;
+            N= N/2;
+        }
+        return ans;
+
+    }
 }
